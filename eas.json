@@ -1,5 +1,9 @@
 {
   "build": {
+    "production": {
+      "android": {
+        "image": "latest"
+      },
     "preview": {
       "android": {
         "image": "latest",
