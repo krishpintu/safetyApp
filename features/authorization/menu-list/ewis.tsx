@@ -1,0 +1,211 @@
+import React from "react";
+import HomeIconSolid from "@heroicons/react/24/solid/HomeIcon";
+import {
+  HomeIcon,
+  FilmIcon,
+  BuildingLibraryIcon,
+  PhotoIcon,
+  DocumentIcon,
+  BeakerIcon,
+  GlobeAltIcon,
+  DocumentChartBarIcon,
+  ArrowUpOnSquareIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
+import FolderIcon from "@heroicons/react/24/outline/FolderIcon";
+import FolderIconSolid from "@heroicons/react/24/solid/FolderIcon";
+
+import IMenuItem from "../types/IMenuItem";
+import WisUploadedDataReports from "@/pages/ewis/WisUploadedDataReports";
+
+const Dashboard = React.lazy(() => import("@/pages/ewis/Dashboard"));
+const EWis3D = React.lazy(() => import("@/pages/ewis/EWis3D"));
+const PDFLayout = React.lazy(() => import("@/pages/ewis/PDFLayout"));
+const PageNotFound = React.lazy(() => import("@/pages/PageNotFound"));
+const UploadDocument = React.lazy(() => import("@/pages/ewis/UploadDocument"));
+
+const WisCoordinatorMapping = React.lazy(
+  () => import("@/pages/ewis/WisCoordinatorMapping"),
+);
+const WisDataView = React.lazy(() => import("@/pages/ewis/WisDataView"));
+
+const EWIS_MENU_LIST: IMenuItem[] = [
+  {
+    id: 201,
+    name: "",
+    icon: <HomeIcon className="w-5 h-5" />,
+    iconSelected: <HomeIconSolid className="w-5 h-5" />,
+    appId: 4,
+    path: "",
+    element: <Dashboard />,
+    children: [],
+    menuType: "Static",
+  },
+  {
+    id: 201,
+    name: "Dashboard",
+    icon: <HomeIcon className="w-5 h-5" />,
+    iconSelected: <HomeIconSolid className="w-5 h-5" />,
+    appId: 4,
+    path: "dashboard",
+    element: <Dashboard />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 202,
+    name: "3D WIS",
+    icon: <FilmIcon className="w-5 h-5" />,
+    iconSelected: <FilmIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "ewis3d",
+    element: <EWis3D />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 203,
+    name: "Station Layout",
+    icon: <BuildingLibraryIcon className="w-5 h-5" />,
+    iconSelected: <BuildingLibraryIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "stationlayout",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 204,
+    name: "2D WIS",
+    icon: <PhotoIcon className="w-5 h-5" />,
+    iconSelected: <PhotoIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "ewis2d",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  /* {
+    id: 205,
+    name: "Customer Voice",
+    icon: <SpeakerWaveIcon className="w-5 h-5" />,
+    iconSelected: <SpeakerWaveIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "customervoice",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 206,
+    name: "Part Complexity Matrix",
+    icon: <TableCellsIcon className="w-5 h-5" />,
+    iconSelected: <TableCellsIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "partcomplexity",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  }, */
+  {
+    id: 207,
+    name: "PF MEA",
+    icon: <DocumentIcon className="w-5 h-5" />,
+    iconSelected: <DocumentIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "pfmea",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 208,
+    name: "PPE Matrix",
+    icon: <BeakerIcon className="w-5 h-5" />,
+    iconSelected: <BeakerIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "ppematrix",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 209,
+    name: "Control Plan",
+    icon: <GlobeAltIcon className="w-5 h-5" />,
+    iconSelected: <GlobeAltIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "controlplan",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 210,
+    name: "OPL",
+    icon: <DocumentChartBarIcon className="w-5 h-5" />,
+    iconSelected: <DocumentChartBarIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "opl",
+    element: <PDFLayout />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 281,
+    name: "Upload Documents",
+    icon: <ArrowUpOnSquareIcon className="w-5 h-5" />,
+    iconSelected: <ArrowUpOnSquareIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "uploaddocument",
+    element: <UploadDocument />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 291,
+    name: "WIS Coordinator Mapping",
+    icon: <UserGroupIcon className="w-5 h-5" />,
+    iconSelected: <UserGroupIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "wiscoordinatormapping",
+    element: <WisCoordinatorMapping />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 294,
+    name: "WIS Data View",
+    icon: <UserGroupIcon className="w-5 h-5" />,
+    iconSelected: <UserGroupIcon className="w-5 h-5" />,
+    appId: 4,
+    path: "wisdataview",
+    element: <WisDataView />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 297,
+    name: "WIS Uploaded Data Report",
+    icon: <FolderIcon className="w-5 h-5" />,
+    iconSelected: <FolderIconSolid className="w-5 h-5" />,
+    appId: 4,
+    path: "wisreports",
+    element: <WisUploadedDataReports />,
+    children: [],
+    menuType: "Normal",
+  },
+  {
+    id: 0,
+    name: "",
+    icon: <HomeIcon className="w-5 h-5" />,
+    iconSelected: <HomeIconSolid className="w-5 h-5" />,
+    appId: 4,
+    path: "*",
+    element: <PageNotFound />,
+    children: [],
+    menuType: "Static",
+  },
+];
+
+export default EWIS_MENU_LIST;
