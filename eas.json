@@ -4,23 +4,9 @@
       "android": {
         "image": "latest"
       },
-    "preview": {
-      "android": {
-        "image": "latest",
-        "buildType": "apk"
+      "ios": {
+        "image": "latest"
       }
-    },
-    "preview2": {
-      "android": {
-        "gradleCommand": ":app:assembleRelease"
-      }
-    },
-    "preview3": {
-      "developmentClient": true
-    },
-    "preview4": {
-      "distribution": "internal"
-    },
-    "production": {}
+    }
   }
 }
