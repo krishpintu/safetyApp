@@ -8,5 +8,11 @@
         "image": "latest"
       }
     }
+  },
+  "submit": {},
+  "extra": {
+    "eas": {
+      "projectId": "8c4ea542-4a7c-4d9c-a641-b7e68f5af6df"
+    }
   }
 }
